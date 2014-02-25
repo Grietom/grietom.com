@@ -1,0 +1,45 @@
+<div ng-include=" 'views/partials/header.html' "></div>
+
+
+<div class="">
+    <h2>Contact</h2>
+
+    <form ng-submit='sendmail()' class="form contactform">
+        <div class="form-group">
+            <input class="form-control" type="email" ng-model="contact.email" required placeholder="Email...">
+        </div>
+
+        <div class="form-group">
+            <textarea class="form-control" name="message" id="message" ng-model="contact.message" rows="10" required placeholder="Your message..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <input class="form-control btn btn-primary" type="submit" value="Send">
+        </div>
+
+    </form>
+
+    <div class="social">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <ul class="nav nav-justified">
+                    <li class="centered">Follow me on:</li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/tommi.kauraaho">Facebook</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/TomaH0">Twitter</a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://fi.linkedin.com/pub/tommi-kaura-aho/48/406/277/">LinkedIn</a>
+                    </li>
+                    <li><a target="_blank" href="https://stackoverflow.com/users/1347153/grietom">StackOverflow</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div ng-include=" 'views/partials/footer.html' "></div>

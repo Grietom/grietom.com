@@ -1,0 +1,273 @@
+<div ng-include=" 'views/partials/header.html' "></div>
+
+<div class="">
+    <h2>CV, History & Skill</h2>
+    <div class="row">
+        <div class="subnavcol col-xs-4">
+            <a ng-class="selection == 'education' ? 'btn-success' : ''" class="form-control btn btn-primary" ng-click="selection='education'">Education</a>
+        </div>
+        <div class="subnavcol col-xs-4">
+            <a ng-class="selection == 'history' ? 'btn-success' : ''" class="form-control btn btn-primary" ng-click="selection='history'">Job History</a>
+        </div>
+        <div class="subnavcol col-xs-4">
+            <a ng-class="selection == 'skills' ? 'btn-success' : ''" class="form-control btn btn-primary" ng-click="selection='skills'">Skills</a>
+        </div>
+
+
+        </ul>
+    </div>
+
+    <hr>
+
+
+    <div ng-switch on="selection">
+
+        <div ng-switch-when="education">
+            <h3>Education</h3>
+            <table class="table">
+                <thead>
+                    <th>School</th>
+                    <th>Major</th>
+                    <th>Graduation</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Jamk University of Applied Sciences</td>
+                        <td>Degree programme in Information Business Systems</td>
+                        <td>2013</td>
+                    </tr>
+                    <tr>
+                        <td>Korpilahti Highschool</td>
+                        <td>Undergraduate</td>
+                        <td>2009</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-switch-when="history">
+            <h3>Job History</h3>
+            <table class="table table-hover">
+                <thead>
+                    <th class="col-sm-3">Period</th>
+                    <th class="col-sm-2">Employer</th>
+                    <th class="col-sm-2">Title</th>
+                    <th class="col-sm-5">Tasks and Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>25.11.2013 &mdash; 31.03.2014</td>
+                        <td>Landis+Gyr</td>
+                        <td>R&D Trainee</td>
+                        <td>System integration with the primary purpose of importing call tickets from one system to another.</td>
+                    </tr>
+                    <tr>
+                        <td>23.09.2013 &mdash; ongoing</td>
+                        <td>K-S Kotidata Oy</td>
+                        <td>Server Operator</td>
+                        <td>Maintaining and monitoring servers and keeping them up to date as well as managing backups.</td>
+                    </tr>
+                    <tr>
+                        <td>12.02.2013 &mdash; 12.07.2014</td>
+                        <td>Ecoverkko Oy</td>
+                        <td>Trainee</td>
+                        <td>
+                            <li>Monitoring customer service channels</li>
+                            <li>Developing customer service</li>
+                            <li>Web hosting - operations</li>
+                            <li>Accounting and billing</li>
+                            <li>Web-development</li>
+                            <li>Excel - development</li>
+                            <li>Training</li>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>02.06.2008 &mdash; 13.06.2008</td>
+                        <td>Korpilahti Municipal</td>
+                        <td>Assistant</td>
+                        <td>
+                            Various roles related to home help service including helping elders, delivering food, and keeping the car clean.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Student Projects</h3>
+            <table class="table table-hover">
+                <thead>
+                    <th class="col-sm-4">Period</th>
+                    <th class="col-sm-3">Project client</th>
+                    <th class="col-sm-5">Tasks and Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>05.08.2013 &mdash; 12.11.2013</td>
+                        <td>Protacon Solutions Oy</td>
+                        <td>
+                            <h4><a href="https://www.theseus.fi/handle/10024/68949">Final Thesis</a>
+                            </h4>
+                            <p>The primary purpose of the thesis was to provide the client with a web based system designed to view, filter, earmark and comment on potential client notices on public procurement notice system called HILMA.</p>
+                            <p>The system was implemented using AngularJS, Twitter Bootstrap, Laravel 4 and MongoDB.</p>
+                            <p>Secondary objective of the project was to provide information about NoSQL databases.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>11.2012 &mdash; 03.2013</td>
+                        <td>Landis+Gyr</td>
+                        <td>System integration with the primary purpose of importing call tickets from one system to another.</td>
+                    </tr>
+
+                    <tr>
+                        <td>11.2012 &mdash; 03.2013</td>
+                        <td>K-S RIA ry</td>
+                        <td>
+                            <p>Keski-Suomen Rakennusinsinöörit ja -arkkitehdit ry required an update to their old website. The project was broken into the following parts:
+                            </p>
+                            <ol>
+                                <li>Fix some small anomalies in the old website (until new one can replace the old one)</li>
+                                <li>Construct a website which client can update and manage on his own</li>
+                                <li>Train the client in the usage of the CMS-system chosen for the project</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>11.2012 &mdash; 01.2013</td>
+                        <td>Ari Toikkanen</td>
+                        <td>
+                            <p>Ari Toikkanen wild life experience provider who required more visibility in the internet. The project consisted of basically two parts:
+                            </p>
+                            <ol>
+                                <li>Make a review and recommendation of a web-hosting service</li>
+                                <li>Create a website which client could himself control and edit as he saw fit.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-switch-when="skills">
+
+            <h3>Skills</h3>
+
+            <div id="skillslist">
+                <div class="row">
+
+                    <div class="col-sm-3">
+                        <h4>Languages and technologies</h4>
+                        <ul>
+                            <li>html</li>
+                            <li>css</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>PHP</li>
+                            <li>sql</li>
+                            <li>bash</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+
+                        <h4>Databases</h4>
+                        <ul>
+                            <li>MySQL</li>
+                            <li>MS SQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3">
+                        <h4>Other</h4>
+                        <ul>
+                            <li>Agile - Scrum</li>
+                            <li>Project management</li>
+                            <li>UML</li>
+                            <li>Testing</li>
+                            <li>Microsoft Office</li>
+                            <li>Adobe</li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3">
+
+                        <h4>CMS</h4>
+                        <ul>
+                            <li>Joomla</li>
+                            <li>Wordpress</li>
+                            <li>Concrete 5</li>
+                            <li>Cms Made Simple</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+
+                    <div class="col-sm-6">
+
+                        <h4>Frameworks</h4>
+                        <div class="col-sm-6">
+                            <h5>Php</h5>
+                            <ul>
+                                <li>Zend framework</li>
+                                <li>Codeigniter</li>
+                                <li>Laravel4</li>
+                                <li>Slim</li>
+                                <li>Yii</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+
+                            <h5>
+                                JavaScript
+                            </h5>
+                            <ul>
+                                <li>AngularJS</li>
+                                <li>Jquery</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="col-sm-6">
+
+                        <h4>Operating Systems</h4>
+
+                        <div class="col-sm-6">
+                            <h5>Windows</h5>
+                            <ul>
+                                <li>Windows XP</li>
+                                <li>Windows Vista</li>
+                                <li>Windows 7</li>
+                                <li>Windows 8</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>Linux</h5>
+                            <ul>
+                                <li>Mandriva</li>
+                                <li>Fedora</li>
+                                <li>Arch</li>
+                                <li>Ubuntu</li>
+                                <li>CentOS</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+<div ng-include=" 'views/partials/footer.html' "></div>

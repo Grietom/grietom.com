@@ -1,0 +1,74 @@
+<div ng-include=" 'views/partials/header.html' "></div>
+
+
+<div class="">
+    <h2>Who is Tommi Kaura-Aho?</h2>
+
+    <div class="row">
+        	<div class="subnavcol col-xs-6">
+                <a ng-class="selection == 'notes' ? 'btn-success' : ''" class="form-control btn btn-primary" ng-click="selection='notes'">Cliff notes</a>
+        	</div>
+        	<div class="subnavcol col-xs-6">
+                <a ng-class="selection == 'details' ? 'btn-success' : ''" class="form-control btn btn-primary" ng-click="selection='details'">Detailed</a>
+        	</div>            
+        </ul>
+    </div>
+
+    <div ng-switch on="selection">
+        
+        <div class="animate-switch" ng-switch-default ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}">
+            
+            <p>Are you a lazy reader?  Click on the cliff notes to learn essentials about me.  Want to learn in detail what makes me tick?  Click on detailed.</p>
+
+        </div>
+
+        <div class="animate-switch" ng-switch-when="notes">
+            <ul>
+                <li>Bachelor of Business Administration</li>
+                <li>Deep and critical thinker</li>
+                <li>Calm, reserved and intelligent</li>
+                <li>Quietly ambitious and passionate</li>
+                <li>Customer oriented</li>
+                <li>Anti perfectionist and fault tolerant</li>
+            </ul>
+        </div>
+
+        <div class="animate-switch" ng-switch-when="details">
+
+            <p>
+                To describe myself with a word I would say I am "reserved". I am a calm, intelligent and easy to work with but also keep to myself and don't put myself in the front as much as I want or as much as I should. I am a constant student and althought my recent academic achievement of finishing my bachelor studies award me with some right to call myself a professional, I would still categorize myself a student of my craft.
+            </p>
+            <p>
+                I enjoy good natured arguments, almost about any topic. My sense of humour may be dry and sarcastic but also tends to point out inequalities and faults whether thats of a person, group or society. I keep my own councel, stay true to my values and opinions but also am flexible enough to let loose every now and then.
+            </p>
+
+            <p>
+                Although I am loathe to call myself a pro (yet) my demeanour and attitude have always been and continue to be professional in nature. I am customer oriented person (no I'm not a salesman, I just think that the first question in everyones lips should always be "how does this benefit our customer(s)?") and consider myself a mild-mannered man. Yet I don't lack certain level of ambition or passion. I am very passionate and determined about any assignment I receive and attempt to fulfill any requirements with maximum efficiency and results. I am not a perfectionist, far from it, but I do attempt to keep my work clean and easy to understand.
+            </p>
+
+            <p>
+                My greates accomplishment to date is my graduation from JAMK university of applied sciences with the rights to call myself Bachelor of Business Administration (Tradenomi in finnish). After four years of studying I am free,ready and able to assert myself into the life of a tax paying worker with eager heart and hungry soul to prove myself and make my skills and thirst for more knowledge accompany me with whatever occupation I venture into.
+            </p>
+
+            <p>
+                But what does it mean? Bachelor of Business Administration? In finnish the title carries with it variety of different occupations but in my particular case it means design, creation and implementation of web based software. That can be websites,web-applications, API's, backend, frontend and so many things. I am equally comfortable with drawing charts, writing documentation or hacking code. I do not shy away from the change to hear from the customer themselves either but instead relish the change to hear feedback about the quality of my work.
+            </p>
+
+            <p>In my spare time I keep my skills up to date with several personal projects.  I also enjoy fantasy in both cinematic, game and literary form.  I keep myself in shape with volleyball.</p>
+
+            <p>
+                Want to learn more? Check out <a href="/#/contact">my contact info</a> to see how I can be reached.
+            </p>
+
+        </div>
+
+    </div>
+    <!-- eo ng swithc on div -->
+
+
+
+
+</div>
+
+
+<div ng-include=" 'views/partials/footer.html' "></div>
