@@ -5,6 +5,10 @@
 
 app.controller('ContactCtrl', function ($scope, $location, $http) {
 	$scope.title = 'Contact';
+	$scope.message = {
+		style: '',
+		message: ''
+	};
 	$scope.contact = {
 		email: '',
 		message: ''
@@ -15,20 +19,19 @@ app.controller('ContactCtrl', function ($scope, $location, $http) {
 	};
 
 	$scope.sendmail = function(){
-		$http.post('http://grietom.com/main/rest', $scope.contact)
-			.success(function (a, b, c) {
-				console.log('Success');
-				console.log($scope.contact);
-				console.log(a);
-				console.log(b);
-				console.log(c);
+
+		$http.post('/main/rest/index.php/sendmail', $scope.contact)
+			.success(function (data) {
+				$scope.message.style = 'alert-success';
+				// $scope.message.error = 1;
+				$scope.message.message = data;
 			})
-			.error(function (a, b, c) {
-				console.log('Error');
-				console.log($scope.contact);
-				console.log(a);
-				console.log(b);
-				console.log(c);
+			.error(function (data) {
+				$scope.message.style = 'alert-error';
+				// $scope.message.error = 0;
+				$scope.message.message = data;
 			});
 	};
+
+	window.scope = $scope;
 });

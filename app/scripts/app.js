@@ -43,6 +43,6 @@ app.config(function ($routeProvider, $locationProvider) {
 app.run(['$location', '$rootScope', function($location, $rootScope) {
   $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
     /*jshint unused:false*/
-    // $rootScope.title = current.$$route.title;
+    $rootScope.title = current.$$route.title;
   });
 }]);

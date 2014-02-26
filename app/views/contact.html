@@ -3,7 +3,8 @@
 
 <div class="">
     <h2>Contact</h2>
-
+    
+    <div ng-class="message.style" class="alert centered"><p id="flash">{{message.message}}</p></div>
     <form ng-submit='sendmail()' class="form contactform">
         <div class="form-group">
             <input class="form-control" type="email" ng-model="contact.email" required placeholder="Email...">

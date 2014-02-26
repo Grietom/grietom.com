@@ -1,0 +1,7 @@
+[24-Feb-2014 05:03:24 America/Denver] PHP Fatal error:  Class 'Slim\Slim' not found in /home/grietomc/public_html/main/rest/index.php on line 2
+[24-Feb-2014 05:03:27 America/Denver] PHP Fatal error:  Class 'Slim\Slim' not found in /home/grietomc/public_html/main/rest/index.php on line 2
+[24-Feb-2014 05:04:02 America/Denver] PHP Fatal error:  Class 'Slim\Slim' not found in /home/grietomc/public_html/main/rest/index.php on line 2
+[26-Feb-2014 03:01:04 America/Denver] PHP Parse error:  syntax error, unexpected 'public' (T_PUBLIC) in /home/grietomc/public_html/main_version_1.2/rest/index.php on line 21
+[26-Feb-2014 03:55:50 America/Denver] PHP Fatal error:  Call to a member function header() on a non-object in /home/grietomc/public_html/main_version_1.2/rest/index.php on line 19
+[26-Feb-2014 04:00:00 America/Denver] PHP Fatal error:  Call to a member function header() on a non-object in /home/grietomc/public_html/main_version_1.2/rest/index.php on line 19
+[26-Feb-2014 04:14:39 America/Denver] PHP Parse error:  syntax error, unexpected 'use' (T_USE), expecting '{' in /home/grietomc/public_html/main_version_1.2/rest/index.php on line 13
